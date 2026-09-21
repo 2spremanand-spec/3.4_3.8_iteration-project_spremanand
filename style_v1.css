@@ -1,0 +1,517 @@
+/* CSS files add styling rules to your content */
+
+/* Fonts: Playfair Display for display/headings, Poppins for body text, Tenor Sans for small utility/caption text */
+
+* {
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+margin: 0;
+background-color: #EBD8C0;
+}
+
+.head {
+box-sizing: border-box;
+}
+
+
+/* ==========================================================================
+   Shared page containers — one class per page, same idea as the original site
+   ========================================================================== */
+
+.grid-container,
+.grid-container2,
+.grid-container3,
+.grid-container4 {
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+
+.content {
+flex: 1;
+}
+
+.scroll-area {
+width: 100%;
+}
+
+
+/* ==========================================================================
+   Nav — a hamburger icon that floats directly over the photo (no bar behind it),
+   and a slide-out panel with the page links.
+   ========================================================================== */
+
+.nav-toggle {
+display: none;
+}
+
+.hamburger-btn {
+position: fixed;
+top: 22px;
+left: 24px;
+z-index: 60;
+font-size: 28px;
+line-height: 1;
+color: #FFFFFF;
+background: transparent;
+border: none;
+cursor: pointer;
+padding: 6px;
+font-family: 'Poppins', sans-serif;
+text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+.nav-overlay {
+display: none;
+position: fixed;
+inset: 0;
+z-index: 54;
+cursor: default;
+}
+
+.nav-toggle:checked ~ .nav-overlay {
+display: block;
+}
+
+.nav-panel {
+position: fixed;
+top: 0;
+left: -320px;
+width: 300px;
+height: 100vh;
+background-color: #181006;
+z-index: 55;
+padding: 90px 40px 40px 40px;
+box-shadow: 4px 0 24px rgba(0,0,0,0.4);
+transition: left 0.3s ease;
+}
+
+.nav-toggle:checked ~ .nav-panel {
+left: 0;
+}
+
+.nav-close {
+position: absolute;
+top: 18px;
+right: 18px;
+z-index: 65;
+cursor: pointer;
+display: none;
+}
+
+.nav-toggle:checked ~ .nav-panel .nav-close {
+display: block;
+}
+
+.nav-close img {
+width: 40px;
+height: 40px;
+display: block;
+}
+
+.nav-links {
+display: flex;
+flex-direction: column;
+gap: 32px;
+margin-top: 10px;
+}
+
+.nav-links a {
+color: #FFFFFF;
+text-decoration: none;
+font-family: 'Playfair Display', serif;
+font-size: 21px;
+letter-spacing: 1px;
+text-transform: uppercase;
+width: fit-content;
+}
+
+.nav-links a.active {
+color: #C9A227;
+border-bottom: 2px solid #C9A227;
+padding-bottom: 6px;
+}
+
+
+/* ==========================================================================
+   Hero — full-height photo banner used on the Home page
+   ========================================================================== */
+
+.hero {
+position: relative;
+min-height: 100vh;
+display: flex;
+align-items: center;
+background-image: linear-gradient(rgba(20,12,6,0.35), rgba(20,12,6,0.5)), url("../images/image.png");
+background-size: cover;
+background-position: center;
+}
+
+.hero-content {
+padding: 0 8%;
+max-width: 680px;
+}
+
+.hero-title {
+font-family: 'Playfair Display', serif;
+font-style: italic;
+color: #FFFFFF;
+font-size: 64px;
+letter-spacing: 1px;
+margin: 0 0 14px 0;
+line-height: 1.1;
+}
+
+.hero-subtitle {
+font-family: 'Tenor Sans', sans-serif;
+color: #F3E9D6;
+font-size: 20px;
+margin: 0;
+max-width: 480px;
+}
+
+
+/* ==========================================================================
+   Page banner
+   ========================================================================== */
+
+.page-banner {
+position: relative;
+min-height: 45vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background-image: linear-gradient(rgba(20,12,6,0.3), rgba(20,12,6,0.4)), url("../images/image.png");
+background-size: cover;
+background-position: center;
+}
+
+.banner-title {
+font-family: 'Playfair Display', serif;
+font-style: italic;
+color: #FFFFFF;
+font-size: 52px;
+letter-spacing: 1px;
+margin: 0;
+text-align: center;
+}
+
+
+/* ==========================================================================
+   Page content area
+   ========================================================================== */
+
+.page-content {
+max-width: 1100px;
+margin: 0 auto;
+padding: 60px 24px 40px 24px;
+}
+
+.page-heading {
+font-family: 'Playfair Display', serif;
+color: #5B2A1F;
+font-size: 38px;
+text-align: center;
+margin: 0 0 12px 0;
+}
+
+.intro-tagline {
+font-family: 'Tenor Sans', sans-serif;
+color: #4A3324;
+text-align: center;
+font-size: 18px;
+max-width: 700px;
+margin: 0 auto 40px auto;
+line-height: 1.6;
+}
+
+
+/* ==========================================================================
+   Content grid — Cuisine AND Religions
+   ========================================================================== */
+
+.content-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 36px 32px;
+margin-bottom: 50px;
+}
+
+.grid-card {
+text-align: center;
+}
+
+.grid-card img {
+width: 100%;
+height: 160px;
+object-fit: cover;
+border-radius: 4px;
+border: 1px solid #D8C6A6;
+}
+
+.card-caption {
+font-family: 'Tenor Sans', sans-serif;
+font-size: 12px;
+color: #8A7860;
+margin-top: 6px;
+text-align: center;
+}
+
+
+/* Headings remain centred */
+
+.grid-card h3 {
+font-family: 'Playfair Display', serif;
+color: #5B2A1F;
+font-size: 22px;
+margin: 12px 0 8px 0;
+text-align: center;
+}
+
+
+/* Paragraphs use newspaper-style justified alignment */
+
+.grid-card p {
+font-family: 'Poppins', sans-serif;
+color: #4A3324;
+font-size: 14px;
+line-height: 1.6;
+margin: 0;
+text-align: justify;
+text-align-last: left;
+}
+
+
+/* ==========================================================================
+   Copyright
+   ========================================================================== */
+
+.copyright {
+font-family: 'Tenor Sans', sans-serif;
+font-size: 13px;
+text-align: center;
+color: #FFFFFF;
+text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+position: absolute;
+bottom: 24px;
+width: 100%;
+padding: 0;
+}
+
+
+/* ==========================================================================
+   Site footer
+   ========================================================================== */
+
+.site-footer {
+background-color: #213B15;
+color: #F3E9D6;
+padding: 34px 5% 28px 5%;
+display: grid;
+grid-template-columns: 1fr auto 1fr;
+align-items: start;
+gap: 30px;
+}
+
+.footer-col h4 {
+font-family: 'Playfair Display', serif;
+color: #C9A227;
+font-size: 15px;
+margin: 0 0 10px 0;
+}
+
+.footer-col ul {
+list-style: none;
+margin: 0;
+padding: 0;
+font-family: 'Tenor Sans', sans-serif;
+font-size: 13px;
+line-height: 1.9;
+}
+
+.footer-col.sources ul {
+max-width: 420px;
+}
+
+.footer-col.image-sources {
+justify-self: end;
+text-align: left;
+}
+
+.footer-col.image-sources ul {
+max-width: 320px;
+}
+
+.footer-copyright {
+text-align: center;
+padding: 0 26px;
+border-left: 1px dotted #C9A227;
+border-right: 1px dotted #C9A227;
+align-self: stretch;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.footer-emblem {
+width: 46px;
+height: 30px;
+margin-bottom: 6px;
+}
+
+.footer-copyright p {
+font-family: 'Tenor Sans', sans-serif;
+font-size: 13px;
+margin: 0;
+line-height: 1.6;
+white-space: nowrap;
+}
+
+
+/* Contact's standalone copyright bar */
+
+.copyright4 {
+font-family: 'Tenor Sans', sans-serif;
+color: #F3E9D6;
+background-color: #213B15;
+text-align: center;
+padding: 34px 0 28px 0;
+}
+
+.copyright4 .footer-emblem {
+width: 46px;
+height: 30px;
+margin-bottom: 6px;
+}
+
+.copyright4 p {
+font-size: 13px;
+margin: 0;
+line-height: 1.6;
+}
+
+
+/* ==========================================================================
+   Contact page
+   ========================================================================== */
+
+.contact-intro {
+text-align: center;
+margin-bottom: 40px;
+}
+
+.contact-intro h2 {
+font-family: 'Playfair Display', serif;
+color: #5B2A1F;
+font-size: 38px;
+margin: 0 0 12px 0;
+}
+
+.contact-intro p {
+font-family: 'Tenor Sans', sans-serif;
+color: #4A3324;
+font-size: 16px;
+max-width: 600px;
+margin: 0 auto;
+line-height: 1.6;
+}
+
+.contact-form {
+max-width: 640px;
+margin: 0 auto;
+}
+
+.form-group {
+margin-bottom: 20px;
+display: flex;
+flex-direction: column;
+}
+
+.form-group label {
+font-family: 'Poppins', sans-serif;
+font-size: 14px;
+color: #4A3324;
+margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+font-family: 'Poppins', sans-serif;
+font-size: 14px;
+padding: 10px 12px;
+border: 1px solid #B79C71;
+border-radius: 3px;
+background-color: #FBF6EC;
+color: #4A3324;
+}
+
+.form-group textarea {
+resize: vertical;
+min-height: 120px;
+}
+
+.submit-btn {
+font-family: 'Poppins', sans-serif;
+background-color: #2B3A1E;
+color: #F3E9D6;
+border: none;
+padding: 14px 28px;
+font-size: 14px;
+letter-spacing: 1px;
+cursor: pointer;
+}
+
+.submit-btn:hover {
+background-color: #3E5029;
+}
+
+
+/* ==========================================================================
+   Small screens
+   ========================================================================== */
+
+@media (max-width: 800px) {
+
+.content-grid {
+grid-template-columns: 1fr;
+}
+
+.hero-title {
+font-size: 42px;
+}
+
+.banner-title {
+font-size: 36px;
+}
+
+.nav-panel {
+width: 85%;
+max-width: 300px;
+left: -100%;
+padding: 80px 28px 32px 28px;
+}
+
+.site-footer {
+grid-template-columns: 1fr;
+justify-items: center;
+text-align: center;
+}
+
+.footer-col.image-sources {
+justify-self: center;
+}
+
+.footer-copyright {
+border-left: none;
+border-right: none;
+border-top: 1px dotted #C9A227;
+border-bottom: 1px dotted #C9A227;
+padding: 16px 0;
+order: -1;
+}
+
+}
