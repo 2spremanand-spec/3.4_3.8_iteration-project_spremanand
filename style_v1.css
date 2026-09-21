@@ -18,7 +18,7 @@ box-sizing: border-box;
 
 
 /* ==========================================================================
-   Shared page containers — one class per page, same idea as the original site
+   Shared page containers
    ========================================================================== */
 
 .grid-container,
@@ -40,8 +40,7 @@ width: 100%;
 
 
 /* ==========================================================================
-   Nav — a hamburger icon that floats directly over the photo (no bar behind it),
-   and a slide-out panel with the page links.
+   Navigation
    ========================================================================== */
 
 .nav-toggle {
@@ -137,7 +136,7 @@ padding-bottom: 6px;
 
 
 /* ==========================================================================
-   Hero — full-height photo banner used on the Home page
+   Hero
    ========================================================================== */
 
 .hero {
@@ -201,7 +200,7 @@ text-align: center;
 
 
 /* ==========================================================================
-   Page content area
+   Page content
    ========================================================================== */
 
 .page-content {
@@ -272,7 +271,7 @@ text-align: center;
 }
 
 
-/* Paragraphs use newspaper-style justified alignment */
+/* Newspaper-style paragraph writing */
 
 .grid-card p {
 font-family: 'Poppins', sans-serif;
@@ -471,6 +470,118 @@ background-color: #3E5029;
 
 
 /* ==========================================================================
+   CUISINE PAGE — VERSION 2 DESIGN TRIAL
+
+   Only Page 2 receives the cooler colours and generic fonts.
+   The newspaper paragraph alignment is kept.
+   ========================================================================== */
+
+.grid-container2 {
+background-color: #E4E8EC;
+}
+
+.grid-container2 .banner-title {
+font-family: Georgia, 'Times New Roman', serif;
+color: #F4F6F8;
+}
+
+.grid-container2 .page-heading {
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 600;
+color: #455A6B;
+}
+
+.grid-container2 .intro-tagline {
+font-family: Arial, Helvetica, sans-serif;
+color: #5F6D78;
+}
+
+.grid-container2 .grid-card img {
+border-color: #B7C1C9;
+}
+
+.grid-container2 .card-caption {
+font-family: Arial, Helvetica, sans-serif;
+color: #7A8791;
+text-align: center;
+}
+
+
+/* Cuisine headings stay centred */
+
+.grid-container2 .grid-card h3 {
+font-family: Georgia, 'Times New Roman', serif;
+font-weight: normal;
+color: #3F596B;
+text-align: center;
+}
+
+
+/* Cuisine paragraphs are justified like newspaper writing */
+
+.grid-container2 .grid-card p {
+font-family: Arial, Helvetica, sans-serif;
+color: #505D66;
+text-align: justify;
+text-align-last: left;
+}
+
+.grid-container2 .nav-panel {
+background-color: #303C46;
+}
+
+.grid-container2 .nav-links a {
+font-family: Arial, Helvetica, sans-serif;
+color: #F1F3F5;
+}
+
+.grid-container2 .nav-links a.active {
+color: #AFC4D2;
+border-bottom-color: #AFC4D2;
+}
+
+.grid-container2 .site-footer {
+background-color: #394B59;
+color: #E6EBEE;
+}
+
+.grid-container2 .footer-col h4 {
+font-family: Arial, Helvetica, sans-serif;
+color: #B8CDD9;
+}
+
+.grid-container2 .footer-col ul {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid-container2 .footer-copyright {
+border-left-color: #91A7B4;
+border-right-color: #91A7B4;
+}
+
+.grid-container2 .footer-copyright p {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ==========================================================================
+   RELIGIONS PAGE
+
+   Religion headings stay centred.
+   Only the actual paragraphs use newspaper-style alignment.
+   ========================================================================== */
+
+.grid-container3 .grid-card h3 {
+text-align: center;
+}
+
+.grid-container3 .grid-card p {
+text-align: justify;
+text-align-last: left;
+}
+
+
+/* ==========================================================================
    Small screens
    ========================================================================== */
 
@@ -512,6 +623,13 @@ border-top: 1px dotted #C9A227;
 border-bottom: 1px dotted #C9A227;
 padding: 16px 0;
 order: -1;
+}
+
+.grid-container2 .footer-copyright {
+border-left: none;
+border-right: none;
+border-top: 1px dotted #91A7B4;
+border-bottom: 1px dotted #91A7B4;
 }
 
 }
